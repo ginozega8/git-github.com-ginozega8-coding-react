@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+* {
+    font-family: 'Exo 2', sans-serif;
+}
+/* Background */
+body {
+    background-color: #045533 !important;
+}
+
+/* App Box */
+.todo-list {
+    border-radius: 10px;
+    min-height: 560px;
+    padding: 10px;
+    margin: 0px 30% 0px 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* App text */
+.App {
+text-align: center;
+padding-top: 5%;
+color: rgb(218, 219, 220);
+}
+
+/* Individual todo */
+#todos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(6, 0, 61);
+    border-radius: 10px;
+    margin: 20px;
+    justify-content: center;
+}
+
+
+/* Different color for todos */
+.todo-row:nth-child(4n + 1) {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+/* Icons and text resize and hover*/
+.icons > i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px;
+}
+
+.icons > i:hover {
+    font-size: 24px;
+}
+
+.todo-text {
+    padding: 5px;
+    font-size:18px;
+}
+
+/* Form display config */
+.todo-form {
+    display: grid;
+    grid-template-columns: 30% 20%;
+    justify-content: center;
+}
+
+/* input and button */
+.todo-input {
+    padding: 3px;
+    border: none;
+    outline:none;
+}
+.complete {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+#root > div > div > form > button {
+    padding: 4px;
+
+    border-radius: 0px 3px 3px 0px;
+}
+
+@media screen and (max-width:1200px) {
+.todo-list{
+    margin: 0 20% 0 20%;
+}
+}
+
+@media screen and (max-width:800px){
+    .todo-list{
+        margin: 0 10% 0 10%
+    }
+}
+
+@media screen and (max-width:570px){
+    .todo-list{
+        margin: 0;
+    }
+    .todo-form {
+        display: grid;
+        grid-template-columns: 80%;
+    }
+    #todos {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+
+
+
