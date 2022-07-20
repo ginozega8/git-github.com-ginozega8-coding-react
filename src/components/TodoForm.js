@@ -1,12 +1,16 @@
 import React, {useState, useEffect, useRef} from 'react'
 import nextId from "react-id-generator";
 import "bootstrap/dist/css/bootstrap.min.css"
+
+
 function TodoForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : "")
     const inputRef = useRef(null)
+
     useEffect(() => {
       inputRef.current.focus()
     })
+    
     const handleChange = x => {
         setInput(x.target.value)
     }

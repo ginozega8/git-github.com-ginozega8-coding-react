@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import TodoForm from "./TodoForm"
-import TodoList from './TodoList'
 import "bootstrap/dist/css/bootstrap.min.css"
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -24,10 +23,10 @@ function Todo({todos, completeTodo, removeTodo, updateTodo}) {
         return <TodoForm edit={edit} onSubmit={submitUpdate} />
     }
 
-  return todos.map((todo, index) => (
-    <div className={todo.isComplete ? "todo-row complete" : "todo-row"} key={index} id="todos">
+  return todos.map((todo, index) => (  
+    <div className={todo.isComplete ? "todo-row complete" : "todo-row"} key={index} id="todos"> {/*If todo is complete, add Css class */}
 
-        <div key={todo.id} onClick={() => completeTodo(todo.id)} className="todo-text">
+        <div key={todo.id} onClick={() => completeTodo(todo.id)} className="todo-text"> 
             {todo.text}
         </div>
 
