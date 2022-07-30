@@ -60,6 +60,7 @@ color: rgb(218, 219, 220);
 }
 
 .todo-text {
+    overflow-wrap: break-word;
     padding: 5px;
     font-size:18px;
 }
